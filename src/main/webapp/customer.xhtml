@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>Customer Register</h:head>
+
+<h:body>
+	<h:form>
+
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Name" />
+			<h:inputText id="customerName" value="#{customerBean.customer.name}" />
+
+			<h:outputLabel value="Email" />
+			<h:inputText id="customerEmail" value="#{customerBean.customer.email}" />
+		
+			<h:commandButton action="#{customerBean.save}" value="Save">
+				<f:ajax execute="@form" render="customerName customerEmail :table" />
+			</h:commandButton>
+		</h:panelGrid>
+
+	</h:form>
+
+	<h:dataTable id="table" value="#{customerBean.customers}"
+		var="customer">
+		<h:column>#{customer.id}</h:column>
+		<h:column>#{customer.name}</h:column>
+		<h:column>#{customer.email}</h:column>
+	</h:dataTable>
+
+</h:body>
+</html>
