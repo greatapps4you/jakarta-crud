@@ -3,10 +3,11 @@ package us.greatapps4you.crud.view;
 
 import java.util.List;
 
-import jakarta.annotation.PostConstruct;
-import jakarta.enterprise.context.RequestScoped;
-import jakarta.inject.Inject;
-import jakarta.inject.Named;
+import javax.annotation.PostConstruct;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
+
 import us.greatapps4you.crud.entities.Customer;
 import us.greatapps4you.crud.service.CustomerService;
 

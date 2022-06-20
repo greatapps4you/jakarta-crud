@@ -2,5 +2,5 @@
 
 ## Compile
 
-`mvn clean package -Pwildfly-bootable`
+`mvn clean package`
  
